@@ -1,0 +1,17 @@
+<ion-grid>
+  <form>
+      <ion-item lines="full">
+        <ion-label position="floating">E-mail </ion-label>
+        <ion-input name="login" type="text" [(ngModel)]="email" ></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Senha </ion-label>
+        <ion-input name="senha" type="password" [(ngModel)]="senha" ></ion-input>
+      </ion-item>
+        <ion-button expand="full" color="tertiary" type="submit" (click)="cadastrar()"> 
+        Enviar <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+ </form>
+</ion-grid>
+ 
+

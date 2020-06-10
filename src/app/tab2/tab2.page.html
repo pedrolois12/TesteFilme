@@ -1,0 +1,79 @@
+<ion-content>
+<div class='img-b'>
+  <ion-header collapse="condense"></ion-header>
+    <div class="input-group mb-3 border border-secondary ">
+      <div class="input-group-prepend">
+        
+        <label class="input-group-text border-secondary" for="inputGroupSelect01"> Países <ion-icon name="earth-outline"></ion-icon></label>
+      </div>
+      
+      <select (change)="getMortesPaiseSel()" [(ngModel)]="select_paises" class="custom-select" id="inputGroupSelect01">
+        <option *ngFor="let caso of this.detalhes_paises" value="{{caso.country}}"> {{caso.country}} </option>
+      </select>
+
+       <table class="table table-sm table-dark rounded">
+        <tr>
+          <td class="table-dark border-top border-bottom border-danger"><h5>Casos confirmados({{this.paises_country}}): </h5></td>
+          <td class="table-dark border-top border-bottom border-danger"><h4><span class="badge badge-danger ml-4">{{this.paises_confir | number}} </span></h4> </td>
+      </tr>
+      <tr>
+        <td class="table-dark border-top border-bottom border-danger"><h5>Pessoas curadas({{this.paises_country}}): </h5></td>
+        <td class="table-dark border-top border-bottom border-danger"><h4><span class="badge badge-danger ml-4">{{this.paises_recov | number}} </span></h4> </td>
+    </tr>
+    <tr>
+      <td class="table-dark border-top border-bottom border-danger"><h5>Casos ativos({{this.paises_country}}): </h5></td>
+      <td class="table-dark border-top border-bottom border-danger"><h4><span class="badge badge-danger ml-4">{{this.paises_casos | number}} </span></h4> </td>
+  </tr>
+    <tr>
+      <td class="table-dark border-top border-bottom border-danger"><h5> N° Óbitos total({{this.paises_country}}): </h5></td>
+      <td class="table-dark border-top border-bottom border-danger"><h4><span class="badge badge-danger ml-4">{{this.paises_morte | number}} </span></h4> </td>
+  </tr>
+        </table>
+
+        <div class="input-group-prepend">
+          <label class="input-group-text border-primary" for="inputGroupSelect01">Estados<ion-icon name="flag-outline"></ion-icon></label>
+        </div>  
+      <select (change)="getMortesMes()" [(ngModel)]="select" class="custom-select" id="inputGroupSelect01">
+        <option *ngFor="let caso of this.detalhes_dia" value="{{caso.state}}"> {{caso.state}} </option>
+      </select>
+    </div>
+
+<table class="table table-sm table-dark rounded">
+<tr class="border-top border-bottom border-danger">
+    <td class="table-dark border-top border-bottom border-danger"><h4> Casos:</h4></td>
+    <td class="table-dark border-top border-bottom border-danger"><h4><span class="badge badge-danger ml-4">{{this.casos_sel_dia | number}} </span></h4></td>
+</tr>
+<tr>
+  <td class="table-dark border-top border-bottom border-danger"> <h4> Óbitos por Covid-19</h4></td>
+  <td class="table-dark border-top border-bottom border-danger"><h4><span class="badge badge-danger ml-4">{{this.mortes_sel_dia | number}}</span></h4></td>
+  </tr>
+</table>
+
+<p>
+<button class="btn btn-info"  (click)="montaGrafico()"type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Gráfico dos estado: <ion-icon name="analytics-outline"></ion-icon>
+</button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+  <canvas id="lineChart" width="540px" #lineChart height="540px" ></canvas>
+  </div>
+</div>
+<p>
+  <button class="btn btn-info"  (click)="montaGraficoBrasil()"type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+      Projeção mensal: <ion-icon name="analytics-outline"></ion-icon>
+  </button>
+  </p>
+  <div class="collapse" id="collapseExample1">
+    <div class="card card-body">
+    <canvas id="CanvasBrasil" width="500px" #CanvasBrasil height="500px" ></canvas>
+    </div>
+  </div>
+
+<ion-scroll scrollY="true">
+</ion-scroll>
+
+</div>
+</ion-content>
+
+

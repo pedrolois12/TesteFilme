@@ -1,0 +1,7 @@
+{
+  "name": "TesteFilme",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
