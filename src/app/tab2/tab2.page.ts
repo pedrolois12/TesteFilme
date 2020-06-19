@@ -104,9 +104,9 @@ export class Tab2Page implements OnInit {
    for(let i=0;i<this.detalhes_dia_fio.length;i++){
        // mes = this.detalhes_dia_fio[i].date.substring(5,7);
       if(mes_in == this.detalhes_dia_fio[i].date.substring(5,7)){
-        console.log("está passando dentro do if", i);
+        //console.log("está passando dentro do if", i);
         aux += this.detalhes_dia_fio[i].new_deaths;
-        console.log("está passando dentro do if-aux", aux);
+       // console.log("está passando dentro do if-aux", aux);
       }
       else if(mes_in != this.detalhes_dia_fio[i].date.substring(5,7)){
         console.log(mes_in);
@@ -119,7 +119,7 @@ export class Tab2Page implements OnInit {
       }
       if(i==this.detalhes_dia_fio.length-1){
         data[j+1]=aux;
-        console.log("final da execução, mes 6");
+        //console.log("final da execução, mes 6");
       }
       total +=aux; 
    }
@@ -266,4 +266,8 @@ export class Tab2Page implements OnInit {
       
    } 
 
+
+   sair(){
+     navigator['app'].exitApp();
+   }
 }

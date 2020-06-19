@@ -51,7 +51,7 @@
 
 <p>
 <button class="btn btn-info"  (click)="montaGrafico()"type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Gráfico dos estado: <ion-icon name="analytics-outline"></ion-icon>
+    Óbitos por estados: <ion-icon name="analytics-outline"></ion-icon>
 </button>
 </p>
 <div class="collapse" id="collapseExample">
@@ -61,7 +61,7 @@
 </div>
 <p>
   <button class="btn btn-info"  (click)="montaGraficoBrasil()"type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
-      Projeção mensal: <ion-icon name="analytics-outline"></ion-icon>
+     Óbitos por mês: <ion-icon name="analytics-outline"></ion-icon>
   </button>
   </p>
   <div class="collapse" id="collapseExample1">
@@ -70,10 +70,13 @@
     </div>
   </div>
 
+ 
+
 <ion-scroll scrollY="true">
 </ion-scroll>
-
+<button type="button" (click)="sair()" class="btn btn-secondary btn-lg btn-block sair">Sair<ion-icon class="align-middle" name="log-in-outline"></ion-icon></button>
 </div>
+
 </ion-content>
 
 

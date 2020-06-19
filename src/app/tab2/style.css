@@ -1,15 +1,22 @@
-.default{
-    width:auto;
-    height: auto;
-}
-
 .img-b{
     background-image: url("src/assets/fundo-transparente.png");
-    background-size: auto 100%;
+    background-size: auto 100% ;
     width:100%;
-    height: 100%;
+    height: auto;
+    max-height: 1366px;
 }
 
 ion-icon{
     font-size:24px;
+}
+
+.alinhar{
+    padding-left: 45%;
+}
+
+.sair{
+    margin-top: 41%;
+    position: relative;
+    
+
 }
