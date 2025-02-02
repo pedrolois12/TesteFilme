@@ -8,7 +8,7 @@ import { ThrowStmt } from '@angular/compiler';
 @Component({
   selector: 'app-inserir',
   templateUrl: './inserir.page.html',
-  styleUrls: ['./inserir.page.scss'],
+  styleUrls: ['./style.css'],
 })
 export class InserirPage {
 
