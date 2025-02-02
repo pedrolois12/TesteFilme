@@ -32,6 +32,7 @@
     "firebase-admin": "^8.12.1",
     "ngx-bootstrap": "^5.6.1",
     "rxjs": "~6.5.1",
+    "TesteFilme": "file:",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
@@ -59,5 +60,24 @@
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
   },
+<<<<<<< HEAD
   "description": "An Ionic project"
+=======
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+>>>>>>> 12aaded (Retirando dados sensiveis)
 }
