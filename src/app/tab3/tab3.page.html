@@ -1,26 +1,44 @@
-<div>
+
 <ion-grid class="grid">
   <ion-row>
   <ion-col class="ion-align-self-center">  
    <form class="form-group form" >
     <div class="mb-3  pt-4">
-     
-       <input type="text" [(ngModel)]="email" name="email" class="form-control input-email" placeholder="E-Mail" aria-label="Recipient's username" aria-describedby="inputGroup-sizing-sm">
-     
+    
+      <div class="input-group mb-3 coluna1">
+        <div class="input-group-prepend">
+          <span class="input-group-text"  id="inputGroup-sizing-default"><ion-icon style="color:cornflowerblue"class="ion-icon" name="person-sharp"></ion-icon></span>
+        </div>
+        <input type="text" [(ngModel)]="email" name="email" class="form-control input-email" placeholder="E-Mail" aria-label="Recipient's username" aria-describedby="inputGroup-sizing-sm"> 
+      </div>
+      
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default"><ion-icon style="color:cornflowerblue" name="lock-open-sharp"></ion-icon></span>
+        </div>
         <input [(ngModel)]="senha" type="password" name="senha" placeholder="Senha" class="form-control input-senha" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-     
+      </div> 
       </div>
       <div class="botoes">
-       <ion-button class="mr-4 ml-3"color="secondary" type="submit" name="logar" (click)="insereUsuario()">
+       <button class="mr-4 ml-3 btn btn-success btn-lg"color="secondary" type="submit" name="logar" (click)="insereUsuario()">
         Login: <ion-icon slot='end' name="enter"> </ion-icon>
-      </ion-button>
-      <ion-button color="tertiary" (click)="cadastrar()"> 
+      </button>
+      <button class ="btn btn-info btn-lg" (click)="cadastrar()"> 
         Cadastre-se <ion-icon slot="end" name="person-add"> </ion-icon>
-      </ion-button>
+      </button>
+     
     </div>
     </form>
    </ion-col>
   </ion-row>
+  <ion-row>
+    <div class="alert alert-primary fixed-bottom " role="alert" style="margin-bottom: 0%; height: 10%;">
+      <p  style="font-size: 12px;" class="font-weight-bolder text-wrap" >Desenvolvido por: Pedro Ferreira Aleixo Lóis</p>
+      <p  style="font-size: 12px;" class="font-weight-bolder text-wrap">API's utilizadas:
+      <a href="https://bigdata-covid19.icict.fiocruz.br/" class="alert-link"> Fio Cruz </a> //
+      <a href="https://covid19-brazil-api.now.sh/" class="alert-link"> COVID-19 Brazil API </a>
+    </p>
+    </div>
+  </ion-row>
 </ion-grid>
-</div>
 

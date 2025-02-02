@@ -1,7 +1,8 @@
 {
   "name": "TesteFilme",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
