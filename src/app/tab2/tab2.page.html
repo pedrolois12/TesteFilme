@@ -182,6 +182,29 @@
           <canvas id="CanvasBrasil" width="500px" #CanvasBrasil height="500px"></canvas>
         </div>
       </div>
+      <p>
+        <button class="btn btn-info" (click)="montaGrafico()" type="button" data-toggle="collapse"
+          data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Óbitos por estados: <ion-icon name="analytics-outline"></ion-icon>
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <canvas id="lineChart" width="540px" #lineChart height="540px"></canvas>
+        </div>
+      </div>
+      <p>
+        <button class="btn btn-info" (click)="montaGraficoBrasil()" type="button" data-toggle="collapse"
+          data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+          Óbitos por mês: <ion-icon name="analytics-outline"></ion-icon>
+        </button>
+      </p>
+
+      <div class="collapse" id="collapseExample1">
+        <div class="card card-body">
+          <canvas id="CanvasBrasil" width="500px" #CanvasBrasil height="500px"></canvas>
+        </div>
+      </div>
     </div>
 
 
@@ -195,5 +218,17 @@
     </div>
     
 
+
+    <div class="coluna3">
+      <div class="sair-div">
+        <button type="button" (click)="sair()" class="btn btn-secondary btn-lg sair">Sair<ion-icon class="align-middle"
+            name="log-in-outline"></ion-icon></button>
+      </div>
+      <ion-scroll scrollY="true">
+      </ion-scroll>
+    </div>
+    
+
+  </div>
   </div>
 </ion-content>
