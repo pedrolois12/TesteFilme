@@ -1,0 +1,5 @@
+.img-b{
+    background-image: url("src/assets/Fundo.png");
+    background-size: 100% 100%;
+    position: absolute;
+}
